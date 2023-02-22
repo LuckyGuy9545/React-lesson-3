@@ -24,3 +24,6 @@
 если нескольким компонентам нужно общее состояние (state), то хранить нужно в
 ближайшем предке
 ![where to save state for few components, if they have similar state](./assets/howToSaveState.png)
+
+## 6.ToDoList
+список дел, удаление, подсчет общего кол-ва, а также выполненых
