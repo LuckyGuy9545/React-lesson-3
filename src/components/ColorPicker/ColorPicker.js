@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import './ColorPicker.css';
 
 class ColorPicker extends Component {
@@ -13,15 +14,16 @@ class ColorPicker extends Component {
   };
 
   makeOptionClassName = index => {
-    //* добавляем оригинальный класс
-    const optionClasses = ['ColorPicker__option'];
-    //* если индекс одного из обьекта ColorPicker совпадает с тем что в (static) - вешаем доп класс
-    if (index === this.state.activeOptionIndex) {
-      //* если да, то вешаем +класс, нет - оригинальный
-      optionClasses.push('ColorPicker__option--active');
-    }
-    //* разделяем классы пробелом join(' ')
-    return optionClasses.join(' ');
+    //--3. как меняет жизнь classnames
+    return classNames(
+      'ColorPicker__option',
+      // 'через запятую любой клас можно вписать',
+      // 'сколько хочешь',
+      {
+        //*а тут тот класс, который доставится при условии
+        'ColorPicker__option--active': index === this.state.activeOptionIndex,
+      }
+    );
   };
 
   render() {
@@ -65,3 +67,14 @@ export default ColorPicker;
  const { label } = this.props.options[this.state.activeOptionIndex];
  {this.props.options.map(({ label, color }, index) => (
  */
+
+//--(3) всю эту функцию можно заменить classnames(npm)
+// //* добавляем оригинальный класс
+// const optionClasses = ['ColorPicker__option'];
+// //* если индекс одного из обьекта ColorPicker совпадает с тем что в (static) - вешаем доп класс
+// if (index === this.state.activeOptionIndex) {
+//   //* если да, то вешаем +класс, нет - оригинальный
+//   optionClasses.push('ColorPicker__option--active');
+// }
+// //* разделяем классы пробелом join(' ')
+// return optionClasses.join(' ');

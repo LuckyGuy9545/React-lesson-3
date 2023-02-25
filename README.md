@@ -26,4 +26,22 @@
 ![where to save state for few components, if they have similar state](./assets/howToSaveState.png)
 
 ## 6.ToDoList
+
 список дел, удаление, подсчет общего кол-ва, а также выполненых
+
+## 7.Form
+
+классическая форма, поднятие состояния, уникальные ID с помощью пакета
+shortid(npm)
+
+множественные радиокнопки
+
+## 8. файл .env
+
+работает как "сократитель путей к папкам", где обезательно вписать
+SASS-PATH=src(путь к папке с стилями), и в импорте вместо
+'../../styles/styles.scss' будет 'styles/styles.scss'
+
+## 9. пакет classnames(npm) npm i classnames
+
+удобная утилита для добавления, изменения класов
