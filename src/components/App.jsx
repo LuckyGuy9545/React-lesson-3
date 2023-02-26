@@ -55,6 +55,7 @@ class App extends Component {
 
   //* удаляем из списка
   deleteTodo = todoId => {
+    // console.log(todoId);
     this.setState(prevState => ({
       //* читается как : фильтруем из масива todos каждый todo, id которого не равно todoId (который мы возьмем позже в самом ToDoList.js)
       todos: prevState.todos.filter(todo => todo.id !== todoId),
