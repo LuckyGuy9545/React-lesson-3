@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import './ToDoList.css';
+import Todo from 'components/Todo/Todo';
 
 const ToDoList = ({ todos, onDeleteTodo, onToggleCompleted }) => (
   <ul className="TodoList">
@@ -12,14 +13,13 @@ const ToDoList = ({ todos, onDeleteTodo, onToggleCompleted }) => (
           'TodoList__item--completed': completed,
         })}
       >
-        <input
-          type="checkbox"
-          className="TodoList__checkbox"
-          checked={completed}
-          onChange={() => onToggleCompleted(id)}
+        {/* //*компоненты лучше делать отдельно */}
+        <Todo
+          text={text}
+          completed={completed}
+          onToggleCompleted={() => onToggleCompleted(id)}
+          onDeleteTodo={() => onDeleteTodo(id)}
         />
-        <p className="TodoList__text">{text}</p>
-        <button onClick={() => onDeleteTodo(id)}>Delete</button>
       </li>
     ))}
   </ul>
