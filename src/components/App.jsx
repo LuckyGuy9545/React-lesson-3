@@ -43,7 +43,7 @@ class App extends Component {
       },
     ],
     filter: '',
-    showModal: true,
+    showModal: false,
   };
 
   //== Урок №5
