@@ -43,3 +43,9 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
+//! this.setState() без условия не выполняйте, иначе зацыклите update>render>setState
+
+//! важно сделать проверку, иначе изначальное значение todos будет null при свежем заходе (пустой локал) на страницу и будет ошибка
+
+//!вызывается самим React-ом, без onClick
