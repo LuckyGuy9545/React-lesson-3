@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { createPortal } from 'react-dom';
 import './Modal.css';
-
+//--для модалки нужно создать в index.htmls div другой
 //-- тот случай когда нужно и можно сделать querySelector, чтобы потом в это можно было рендерить разметку
 const modalRoot = document.querySelector('#modal-root');
 
